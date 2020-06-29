@@ -1,23 +1,35 @@
 const leftBtn = document.querySelector("#left");
 const rightBtn = document.querySelector("#right");
-const items = document.querySelector("#items");
-const computedStyles = getComputedStyle(items);
+const itemsList = document.querySelector("#items");
+const computedStyles = window.getComputedStyle(itemsList);
+const  item = document.querySelectorAll(".item");
 
-rightBtn.addEventListener("click", (e) => {
+console.log(item);
+
+const minRight = 0;  
+const preShownItems = 300 / step;
+const maxRight = (items.length - preShownItems) * step;
+const step = 100;
+let currentRight = 0;
+
+itemsList.style.right = currentRight;
+
+right.addEventListener("click", e => {
   e.preventDefault();
-  let currentRight = parseInt(computedStyles.right)
-  if(currentRight < 500) {
-  items.style.right = `${currentRight + 100}px`;
+
+  if (currentRight < maxRight) {
+    currentRight += step;
+    itemsList.style.right = `${currentRight}px`
   }
 })
 
 
-leftBtn.addEventListener("click", (e) => {
+
+left.addEventListener("click", e => {
   e.preventDefault();
-  let currentRight = parseInt(computedStyles.right);
 
-  if(currentRight > 0) {
-    items.style.right = `${currentRight - 100}px`;
-
+  if (currentRight < minRight) {
+    currentRight -= step;
+    itemsList.style.right = `${currentRight}px`
   }
 })
