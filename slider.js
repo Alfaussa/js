@@ -8,7 +8,7 @@ const loop = (direction, e) => {
   if (direction == "right") {
     itemsList.appendChild(itemsList.firstElementChild);
   } else {
-    itemsList.insertBefore(itemsList.lastElementChild, items.firstElementChild);
+    itemsList.insertBefore(itemsList.lastElementChild, itemsList.firstElementChild);
   }
 };
 
