@@ -23,15 +23,36 @@
     </div>
     <a href="#" class="arrow" id="right">-></a>
   </div>
-  <script src="./slider.js"></script>
+ 
   <div class="title"><h5>Second task</h5></div>
 
   <div class="container">
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, doloribus veritatis. Repudiandae quidem adipisci, itaque temporibus doloremque aspernatur ratione expedita voluptatibus ullam totam quis. Molestiae temporibus sapiente velit hic quae?
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem magnam
+      ratione quasi alias adipisci molestias doloribus, provident eum natus
+      rerum, numquam delectus cum at nobis consectetur deserunt perspiciatis
+      eveniet temporibus.
     </p>
-    <button class="btn" id= "openOverlay">Открыть</button>
+    <button class="btn" id="openOverlay">открыть</button>
   </div>
-  <script src=""></script>
+
+  <div class="blocks-coloring-container">
+    <div class="controls">
+      <input type="number" min="0" class="quantity-selector" />
+      <input type="color" class="color-selector" />
+    </div>
+    <div class="blocks"></div>
+  </div>
+ 
+
+  <script type="html/template" id="overlayTemplate">
+    <div class="modal-container">
+      <a class="close" href="#">x</a>
+      <div class="content"></div>
+    </div>
+  </script>
+  <script src="./slider.js"></script>
+  <script src="./window.js"></script>
+  <script src="blocks.js"></script>
 </body>
 </html>
