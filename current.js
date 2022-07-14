@@ -1,5 +1,12 @@
-function getMinimum (a, b) {
-    return a < b ? a : b;
+let x = +prompt("enter first numbers", '');
+let n = +prompt("enter first numbers", '');
+
+function pow(x,n) {
+    if (n > 1 && n%1 == 0){
+    return x**n;
+} else {
+    alert('whole number')
+}
 }
 
-console.log(getMinimum(1, 1));
+alert(pow(x,n));
