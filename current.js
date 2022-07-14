@@ -1,3 +1,5 @@
-function checkAge(age) { 
-    return age > 18  || confirm('Родители разрешили?');
+function getMinimum (a, b) {
+    return a < b ? a : b;
 }
+
+console.log(getMinimum(1, 1));
