@@ -1,12 +1,15 @@
-let x = +prompt("enter first numbers", '');
-let n = +prompt("enter first numbers", '');
+const makePizza = function (title, callbackk){
 
-function pow(x,n) {
-    if (n > 1 && n%1 == 0){
-    return x**n;
-} else {
-    alert('whole number')
-}
+    console.log(`starrted to cook ${title}`);
+    setTimeout(callbackk, 3000);
 }
 
-alert(pow(x,n));
+const eatPizza = function(){
+    console.log('starting to eat');
+}
+
+const readBook = function() {
+    console.log('reading book');
+}
+makePizza('Pepperoni', eatPizza );
+readBook();
