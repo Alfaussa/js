@@ -1,11 +1,12 @@
-let user = {
-    "name" : "John",
-    surname : "Smith",
+let schedule = {
+    name:"alfiya",
 };
 
+function isEmpty (schedule) {
+    for ( let key in schedule) {
+            return false;
+         }
+         return true;
+    }
 
-user.name = "Pete";
-
-delete user["name"];
-
-console.log(user.name);
+console.log(isEmpty (schedule));
