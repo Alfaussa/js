@@ -1,15 +1,11 @@
-const makePizza = function (title, callbackk){
+let user = {
+    "name" : "John",
+    surname : "Smith",
+};
 
-    console.log(`starrted to cook ${title}`);
-    setTimeout(callbackk, 3000);
-}
 
-const eatPizza = function(){
-    console.log('starting to eat');
-}
+user.name = "Pete";
 
-const readBook = function() {
-    console.log('reading book');
-}
-makePizza('Pepperoni', eatPizza );
-readBook();
+delete user["name"];
+
+console.log(user.name);
