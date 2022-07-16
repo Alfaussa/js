@@ -1,16 +1,17 @@
-let calculator = {
-    read() {
-     this.one = +prompt("one number", "");
-     this.two = +prompt("two number", "");
+let ladder = { 
+    step: 0, 
+    up() {
+    this.step++; 
+    return this;
+},
+    down() { 
+        this.step--;
+        return this;
     },
-    sum() {
-        return this.one + this.two;
-    },
-    mul() {
-        return this.one * this.two;
-    }
+    showStep: function() { // показывает текущую ступеньку
+    console.log( this.step )
+    return this;
+ }
+    };
 
-};
-calculator.read();
-alert( calculator.sum() );
-alert( calculator.mul() );
+    ladder.up().up().down().showStep(); // 1
