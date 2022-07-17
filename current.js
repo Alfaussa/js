@@ -1,11 +1,9 @@
 
 
 function ucFirst(str)  {
-if(!str) return str;
-
-return str[0].toUpperCase() + str.slice(1);
+return str.charAt(0).toUpperCase() + str.slice(1);
 
 }
 
 
-console.log(ucFirst("") );
+console.log(ucFirst("gjghjgh") );
