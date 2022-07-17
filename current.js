@@ -1,13 +1,15 @@
-function Accumulator(startingValue){
+function readNumber() {
 
-    this.value = startingValue;
-    this.read = function() {
-    
-        this.value += +prompt("Enter a number?",'');
+
+    do {
+        number = prompt("insert a number", "");
+    } while (!isFinite(number));
+
+    if (number === null || number === "") {
+        return number;
+    } else {
+        return number;
     }
- 
+
 }
-let accumulator = new Accumulator(1); // начальное значение 1 
-accumulator.read(); // прибавит ввод prompt к текущему значению
-accumulator.read(); // прибавит ввод prompt к текущему значению 
-alert(accumulator.value); // выведет сумму этих значений
+alert(`Число: ${readNumber ()}`);
