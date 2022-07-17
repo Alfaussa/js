@@ -1,15 +1,34 @@
-function readNumber() {
+function random(min, max) {
 
-
-    do {
-        number = prompt("insert a number", "");
-    } while (!isFinite(number));
-
-    if (number === null || number === "") {
-        return number;
-    } else {
-        return number;
-    }
+    return Math.random() * (max - min) + min;
 
 }
-alert(`Число: ${readNumber ()}`);
+
+
+
+
+
+console.log( random(1, 5) ); // 1.2345623452 
+console.log( random(1, 5) ); // 3.7894332423
+console.log( random(1, 5) ); // 4.3435234525
+console.log( random(1, 5) ); // 1.2345623452 
+console.log( random(1, 5) ); // 3.7894332423
+console.log( random(1, 5) ); // 4.3435234525
+console.log( random(1, 5) ); // 1.2345623452 
+console.log( random(1, 5) ); // 3.7894332423
+console.log( random(1, 5) ); // 4.3435234525
+console.log( random(1, 5) ); // 1.2345623452 
+console.log( random(1, 5) ); // 3.7894332423
+console.log( random(1, 5) ); // 4.3435234525
+console.log( random(1, 5) ); // 1.2345623452 
+console.log( random(1, 5) ); // 3.7894332423
+console.log( random(1, 5) ); // 4.3435234525
+console.log( random(1, 5) ); // 1.2345623452 
+console.log( random(1, 5) ); // 3.7894332423
+console.log( random(1, 5) ); // 4.3435234525
+console.log( random(1, 5) ); // 1.2345623452 
+console.log( random(1, 5) ); // 3.7894332423
+console.log( random(1, 5) ); // 4.3435234525
+console.log( random(1, 5) ); // 1.2345623452 
+console.log( random(1, 5) ); // 3.7894332423
+console.log( random(1, 5) ); // 4.3435234525
