@@ -1,17 +1,8 @@
-let ladder = { 
-    step: 0, 
-    up() {
-    this.step++; 
-    return this;
-},
-    down() { 
-        this.step--;
-        return this;
-    },
-    showStep: function() { // показывает текущую ступеньку
-    console.log( this.step )
-    return this;
- }
-    };
-
-    ladder.up().up().down().showStep(); // 1
+let user = { name: "John", money: 1000,
+[Symbol.toPrimitive](hint) {
+alert(`hint: ${hint}`);
+return hint == "string" ? `{name: "${this.name}"}` : this.money;
+} };
+alert(user); // hint: string -> {name: "John"} 
+alert(+user); // hint: number -> 1000 
+alert(user + 500); // hint: default -> 1500
