@@ -1,8 +1,18 @@
-let user = { name: "John", money: 1000,
-[Symbol.toPrimitive](hint) {
-alert(`hint: ${hint}`);
-return hint == "string" ? `{name: "${this.name}"}` : this.money;
-} };
-alert(user); // hint: string -> {name: "John"} 
-alert(+user); // hint: number -> 1000 
-alert(user + 500); // hint: default -> 1500
+function Calculator() {
+    this.read = function() {
+    this.x = +prompt("x?", '');
+    this.y = +prompt("y?", '');    
+        };
+    
+    this.sum = function() {
+        return this.x + this.y;
+    }
+
+    this.mul = function() {
+        return this.x * this.y;
+    }
+}
+let calculator = new Calculator(); 
+calculator.read();
+alert( "Sum=" + calculator.sum() ); 
+alert( "Mul=" + calculator.mul() );
