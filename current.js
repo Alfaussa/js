@@ -1,8 +1,13 @@
-function extractCurrencyValue(str) {
+let styles = ['Jazz', 'Blues', 'pop', 'reggi'];
 
-     return +str.slice(1);
+styles.push(' Rock and roll');
 
-}
+let midPos = Math.floor(styles.length -1 /2);
+
+styles[midPos] = 'rock';
+
+styles.shift();
+styles.unshift('rap', 'metal')
 
 
-console.log( extractCurrencyValue('$120') === 120 ); // true
+console.log(styles);
