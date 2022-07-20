@@ -1,5 +1,9 @@
-let arr = [5, 2, 1, -10, 8];
+function copySorted(arr) {
 
-arr.sort((a, b) => b - a);
+ return arr.slice().sort();
+    
+}
 
+let arr = ["HTML", "JavaScript", "CSS"]; 
+console.log(copySorted(arr));
 console.log(arr);
