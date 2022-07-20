@@ -1,14 +1,11 @@
 
 
-function camelize(str) {
+function filterRange(arr, a, b) {
 
-return str.split('-')
-.map((item, index) => index == 0 
-    ? item 
-    : item[0].toUpperCase() + item.slice(1))
-.join('');
-   
+   return arr.filter((item) => item >= a && item < b )
+
+
 }
-console.log(camelize("background-color"));
-console.log(camelize("list-style-image"));
-console.log(camelize("-webkit-transition"));
+let arr = [5, 3, 8, 1];
+console.log(filterRange(arr, 1, 4));
+console.log(arr);
