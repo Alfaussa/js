@@ -1,12 +1,11 @@
-let vasya = { name: "Вася", surname: "Пупкин", id: 1 };
-let petya = { name: "Петя", surname: "Иванов", id: 2 }; 
-let masha = { name: "Маша", surname: "Петрова", id: 3 };
-let users = [ vasya, petya, masha ];
+let vasya = { name: "Вася", age: 25 }; 
+let petya = { name: "Петя", age: 30 }; 
+let masha = { name: "Маша", age: 29 };
+let arr = [ vasya, petya, masha ];
 
 
-let usersMapped = users.map(user => ({
-    fullName:`${user.name} ${user.surname}`, id:`${user.id}`
-}));
-
-console.log( usersMapped[0].id);
-console.log( usersMapped[0].fullName);
+function getAverageAge(arr) {
+  return arr.reduce((prev, item) => prev + item.age, 0)/ arr.length;
+  }
+  
+console.log(getAverageAge(arr));
