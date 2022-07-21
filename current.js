@@ -1,31 +1,12 @@
-function Calculator() {
+let vasya = { name: "Вася", age: 25 }; 
+let petya = { name: "Петя", age: 30 }; 
+let masha = { name: "Маша", age: 28 };
+let users = [ vasya, petya, masha ]; 
 
-    this.methods = {
-        "-": (a, b) => a - b,
-        "+": (a, b) => a + b
-        };
-   this.calculate = function(str) {
 
-    let split = str.split(' '),
-        a = +split[0],
-        op = split[1],
-        b = +split[2]
+let names = [vasya.name, petya.name, masha.name];
 
-if (!this.methods[op] || isNaN(a) || isNaN(b)){
-    return NaN;
-} else { return this.methods[op](a,b)}
-   };
-   this.addMethod = function(name, func){
 
-    this.methods[name] = func;
 
-}}
-let calc = new Calculator;
-let str = "3 + 7";
-console.log( calc.calculate(str) );
-let powerCalc = new Calculator; 
-powerCalc.addMethod("*", (a, b) => a * b); 
-powerCalc.addMethod("/", (a, b) => a / b); 
-powerCalc.addMethod("**", (a, b) => a ** b);
-let result = powerCalc.calculate("2 ** 3");
-console.log( result ); // 8
+
+console.log( names ); // Вася, Петя, Маша
