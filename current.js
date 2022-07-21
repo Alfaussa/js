@@ -4,7 +4,7 @@ let masha = { name: "Маша", age: 28 };
 let users = [ vasya, petya, masha ]; 
 
 
-let names = [vasya.name, petya.name, masha.name];
+let names = users.map(item => item.name);
 
 
 
