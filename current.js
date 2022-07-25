@@ -1,17 +1,15 @@
-function unique(strings) {
-    
-let result = [];
+let J = "ab";
+let S = "aabbccd";
+
+J = J.split('');
+S = S.split('');
+
+var matches = S.filter(function(item){
+    return J.indexOf(item) > -1
+  })
+  console.log(matches.length);
 
 
+//   console.log(s.split('').filter(char => j.includes(char)).join(''));
 
-    for (let str of strings) {
-    if (!result.includes(str)){
-        result.push(str);
-    }
-}
-    return result;
-}
 
-let strings = ["кришна", "кришна", "харе", "харе", "харе", "харе", "кришна", "кришна", ":-O"
-];
-console.log( unique(strings) ); 
