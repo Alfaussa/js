@@ -1,15 +1,11 @@
-let J = "ab";
-let S = "aabbccd";
+function unique(arr) {
 
-J = J.split('');
-S = S.split('');
+ let set = new Set(arr);
+ return set;
+}
 
-var matches = S.filter(function(item){
-    return J.indexOf(item) > -1
-  })
-  console.log(matches.length);
+let values = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"
+];
 
-
-//   console.log(s.split('').filter(char => j.includes(char)).join(''));
-
-
+console.log(unique(values) ); // Hare,Krishna,:-O
