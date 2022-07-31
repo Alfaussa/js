@@ -1,10 +1,19 @@
-function unique(arr) {
 
-return Array.from(new Set(arr));
+let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+
+function aclean(arr) {
+let map = new Map();
+
+for (let word of arr) {
+
+  let sorted = word.toLowerCase().split('').sort().join('');
+  map.set(sorted, word);
 }
 
-let values = ["Hare", "Krishna", "Hare", "Krishna",
-  "Krishna", "Krishna", "Hare", "Hare", ":-O"
-];
+return Array.from(map.values());
+};
 
-console.log(unique(values) ); // Hare,Krishna,:-O
+
+
+
+console.log(aclean(arr)); // "nap,teachers,ear" или "PAN,cheaters,era"
