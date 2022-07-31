@@ -1,7 +1,6 @@
 function unique(arr) {
 
- let set = new Set(arr);
- return set;
+return Array.from(new Set(arr));
 }
 
 let values = ["Hare", "Krishna", "Hare", "Krishna",
